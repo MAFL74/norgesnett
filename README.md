@@ -43,26 +43,48 @@ Sørg for at du bruker riktig URL og at du har inkludert nøkkelen din.
 
 Attributtene du skal få tak i:
 
-Attributes/n
-Tariff ID/n
-Tariff key/n
+Attributes
+
+Tariff ID
+
+Tariff key
+
 Product/n
+
 Company name
+
 Company org no
+
 Title
+
 Last updated
+
 Resolution
+
 Description
+
 Energy ID
+
 Total
+
 Total ex vat
+
 Taxes
+
 Currency
+
 Monetary unit
+
 Kapasitetsledd ID
+
 Kapasitetsledd value min
+
 Kapasitetsledd value max
+
 Kapasitetsledd monthly total
+
 Kapasitetsledd monthly with tax
+
 Kapasitetsledd currency
+
 Kapasitetsledd unit
