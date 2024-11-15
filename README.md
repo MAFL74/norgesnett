@@ -39,3 +39,30 @@ Hvis du opplever problemer:
 
 Sjekk at API-nøkkelen din er gyldig og at du har lagt den inn riktig.
 Sørg for at du bruker riktig URL og at du har inkludert nøkkelen din.
+
+
+Attributtene du skal få tak i:
+
+Attributes
+Tariff ID
+Tariff key
+Product
+Company name
+Company org no
+Title
+Last updated
+Resolution
+Description
+Energy ID
+Total
+Total ex vat
+Taxes
+Currency
+Monetary unit
+Kapasitetsledd ID
+Kapasitetsledd value min
+Kapasitetsledd value max
+Kapasitetsledd monthly total
+Kapasitetsledd monthly with tax
+Kapasitetsledd currency
+Kapasitetsledd unit
