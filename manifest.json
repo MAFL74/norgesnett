@@ -3,7 +3,7 @@
   "name": "Norgesnett API",
   "version": "0.0.4",
   "config_flow": true,
-  "documentation": "https://github.com/<MAFL74/norgesnett",
+  "documentation": "https://github.com/MAFL74/norgesnett",
   "requirements": ["aiohttp"],
   "dependencies": [],
   "codeowners": ["@quint1337"],
