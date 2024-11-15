@@ -1,0 +1,11 @@
+{
+  "domain": "norgesnett",
+  "name": "Norgesnett API",
+  "version": "0.0.4",
+  "config_flow": true,
+  "documentation": "https://github.com/yourusername/norgesnett",
+  "requirements": ["aiohttp"],
+  "dependencies": [],
+  "codeowners": ["@quint1337"],
+  "iot_class": "cloud_polling"
+}
