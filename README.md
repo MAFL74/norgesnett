@@ -38,4 +38,4 @@ Feilsøking
 Hvis du opplever problemer:
 
 Sjekk at API-nøkkelen din er gyldig og at du har lagt den inn riktig.
-Sørg for at du bruker riktig URL og at du har inkludert Bearer før nøkkelen din.
+Sørg for at du bruker riktig URL og at du har inkludert nøkkelen din.
