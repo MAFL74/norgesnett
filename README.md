@@ -1,3 +1,6 @@
+Version: 0.6 (alpha)
+
+
 Slik Bruker Du Norgesnett API
 Denne guiden hjelper deg steg-for-steg med å komme i gang med Norgesnett sitt API. Du får tilgang til data om nettleie, kapasitetsledd og strømpriser. Dette kan være nyttig for å holde oversikt over forbruk og optimalisere energikostnadene dine.
 
