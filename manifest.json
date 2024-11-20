@@ -1,11 +1,14 @@
 {
   "domain": "norgesnett",
   "name": "Norgesnett API",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "config_flow": true,
   "documentation": "https://github.com/MAFL74/norgesnett",
+  "issue_tracker": "https://github.com/MAFL74/norgesnett/issues",
   "requirements": ["aiohttp"],
   "dependencies": [],
   "codeowners": ["@quint1337"],
-  "iot_class": "cloud_polling"
+  "iot_class": "cloud_polling",
+  "logo": "norgesnett_512.png",
+  "icon": "norgesnett_logo_256.png"
 }

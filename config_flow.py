@@ -2,7 +2,9 @@ import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
 import aiohttp
-from .const import DOMAIN, CONF_API_KEY, CONF_METERING_POINT_ID, CONF_UPDATE_INTERVAL, CONF_API_URL, DEFAULT_API_URL, DEFAULT_UPDATE_INTERVAL
+from .const import DOMAIN, CONF_API_KEY, CONF_METERING_POINT_ID, CONF_UPDATE_INTERVAL, CONF_API_URL, DEFAULT_API_URL
+
+DEFAULT_UPDATE_INTERVAL = 24  # 24 timer
 
 class NorgesnettConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
@@ -10,15 +12,17 @@ class NorgesnettConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_user(self, user_input=None):
         errors = {}
         if user_input is not None:
+            # Test API-nøkkel og målepunkt-ID
             if await self._test_credentials(user_input[CONF_API_KEY], user_input[CONF_METERING_POINT_ID]):
                 return self.async_create_entry(title="Norgesnett API", data=user_input)
             else:
                 errors["base"] = "invalid_credentials"
 
+        # Konfigurasjonsskjema med standardverdier
         data_schema = vol.Schema({
             vol.Required(CONF_API_KEY): str,
             vol.Required(CONF_METERING_POINT_ID): str,
-            vol.Optional(CONF_UPDATE_INTERVAL, default=DEFAULT_UPDATE_INTERVAL): int,
+            vol.Optional(CONF_UPDATE_INTERVAL, default=DEFAULT_UPDATE_INTERVAL): int,  # 24 timer som standard
             vol.Optional(CONF_API_URL, default=DEFAULT_API_URL): str,
         })
 
@@ -48,8 +52,10 @@ class NorgesnettOptionsFlow(config_entries.OptionsFlow):
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)
 
+        # Konfigurasjonsskjema for endringer
         data_schema = vol.Schema({
-            vol.Optional(CONF_UPDATE_INTERVAL, default=self.config_entry.data.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL)): int,
+            vol.Optional(CONF_API_KEY, default=self.config_entry.data.get(CONF_API_KEY, "")): str,
+            vol.Optional(CONF_UPDATE_INTERVAL, default=self.config_entry.data.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL)): int,  # 24 timer som standard
             vol.Optional(CONF_API_URL, default=self.config_entry.data.get(CONF_API_URL, DEFAULT_API_URL)): str,
         })
         return self.async_show_form(step_id="init", data_schema=data_schema)

@@ -6,4 +6,4 @@ CONF_API_URL = "api_url"
 
 # Standardverdier
 DEFAULT_API_URL = "https://gridtariff-api.norgesnett.no/api/v1.01/TariffQuery/MeteringPointsGridTariffs"
-DEFAULT_UPDATE_INTERVAL = 60  # minutter
+DEFAULT_UPDATE_INTERVAL = 24
