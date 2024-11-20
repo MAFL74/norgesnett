@@ -33,8 +33,6 @@ Kapasitetsledd: Basert på hvor mye strøm du bruker samtidig.
 Energiledd: Basert på hvor mye strøm du totalt forbruker.
 Kapasitetsleddet er delt inn i 10 trinn:
 
-Trinn	Effektområde (kW)	Kapasitetsledd (kr/mnd)  
-
 | Trinn | Effektområde (kW) | Kapasitetsledd (kr/mnd)|
 |-------|-------------------|-------------------------|
 | 1     | 0-1,99            | 102,51                  |
