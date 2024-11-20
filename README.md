@@ -9,28 +9,18 @@ Tariffdetaljer: Opplysninger om gjeldende tariffer og priser.
 
 Hvordan installere Norgesnett API-integrasjonen
 
-Forutsetninger
-API-nøkkel fra Norgesnett.
-Målepunkt-ID (metering_point_id) fra ditt strømabonnement.
-Home Assistant installert.
+Forutsetninger:  
+API nøkkel fra Norgesnett (api_key): xxxxxxxxxxxxxxxxx
+Målepunkt ID (metering_point_id): xxxxxxxxxxxxxxxxx
+Oppdaterings interval i timer (update_interval): 24 timer
+Standard URL (api_url): "https://gridtariff-api.norgesnett.no/api/v1.01/Tariff"
 
-Trinn 1: Legg til integrasjonen i Home Assistant
-Plasser Python-koden i mappen custom_components/norgesnett/ i Home Assistant-konfigurasjonen.
-Sørg for at const.py inneholder riktige verdier:
-DOMAIN = "norgesnett"
-DEFAULT_UPDATE_INTERVAL = 24 (i minutter)
-DEFAULT_API_URL = "https://gridtariff-api.norgesnett.no/api/v1.01/Tariff"
+Trinn 1:
 
-Trinn 2: Konfigurer integrasjonen
-Gå til Innstillinger > Enheter og tjenester i Home Assistant.
-Klikk på Legg til integrasjon.
-Søk etter Norgesnett API og oppgi følgende:
-API Key: Din API-nøkkel.
-Metering Point ID: Din målepunkt-ID.
-Oppdateringsintervall: Standard er 24 minutter.
-API URL: https://gridtariff-api.norgesnett.no/api/v1.01/Tariff
+Hent API nøkkel fra Norgesnett. https://gridtariff-api.norgesnett.no/swagger/index.html
+Du må ha Målepunkt ID klar for å hente ut denne.
 
-Trinn 3: Overvåk data
+Trinn 2: Overvåk data
 Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:
 
 cheap_total: Billig energipris (natt).
@@ -55,40 +45,38 @@ Trinn	Effektområde (kW)	Kapasitetsledd (kr/mnd)
 9	75-99,99	2 718,59  
 10	>100	4 405,95  
   
-Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.
+Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
+-------------  
+Attributter og deres funksjon:  
   
--------------
+Tariff ID: Identifikator for tariffen.  
+Tariff key: Type tariff.  
+Product: Navn på tariffproduktet.  
+Company name: Navnet på selskapet som leverer tariffen.  
+Company org no: Organisasjonsnummeret til selskapet.  
+Title: Beskrivelse av tariffen.  
+Last updated: Når tariffdataene sist ble oppdatert.  
+Resolution: Oppdateringsintervall i minutter.  
+Cheap energy ID: ID for billig energiperiode.  
+Cheap total: Total pris per kWh i billig periode.  
+Cheap total ex vat: Pris ekskl. mva i billig periode.  
+Cheap taxes: Mva for billig energi.  
+Normal energy ID: ID for normal energiperiode.  
+Normal total: Total pris per kWh i normal periode.  
+Normal total ex vat: Pris ekskl. mva i normal periode.  
+Normal taxes: Mva for normal energi.  
+Kapasitetsledd value min: Minimum strømforbruk for dette trinnet.  
+Kapasitetsledd value max: Maksimum strømforbruk for dette trinnet.  
+Kapasitetsledd next down: Forrige trinn.  
+Kapasitetsledd next up: Neste trinn.  
+Kapasitetsledd unit: Måleenhet for strømforbruk.  
+Kapasitetsledd monthly total: Månedlig kostnad for kapasitetsleddet.  
+Kapasitetsledd monthly ex vat: Månedlig kostnad uten mva.  
+Kapasitetsledd monthly taxes: Mva for kapasitetsleddet.  
+Kapasitetsledd currency: Valuta brukt i tariffen.  
+Kapasitetsledd unit measure: Måleenhet for månedlig kostnad.  
+Kapasitetsledd trinn: Trinnnummer basert på forbruk.  
+Oppdatering: Last API update: Når data sist ble hentet fra API-et.  
   
-Attributter og deres funksjon:
   
-Tariff ID: Identifikator for tariffen.
-Tariff key: Type tariff.
-Product: Navn på tariffproduktet.
-Company name: Navnet på selskapet som leverer tariffen.
-Company org no: Organisasjonsnummeret til selskapet.
-Title: Beskrivelse av tariffen.
-Last updated: Når tariffdataene sist ble oppdatert.
-Resolution: Oppdateringsintervall i minutter.
-Cheap energy ID: ID for billig energiperiode.
-Cheap total: Total pris per kWh i billig periode.
-Cheap total ex vat: Pris ekskl. mva i billig periode.
-Cheap taxes: Mva for billig energi.
-Normal energy ID: ID for normal energiperiode.
-Normal total: Total pris per kWh i normal periode.
-Normal total ex vat: Pris ekskl. mva i normal periode.
-Normal taxes: Mva for normal energi.
-Kapasitetsledd value min: Minimum strømforbruk for dette trinnet.
-Kapasitetsledd value max: Maksimum strømforbruk for dette trinnet.
-Kapasitetsledd next down: Forrige trinn.
-Kapasitetsledd next up: Neste trinn.
-Kapasitetsledd unit: Måleenhet for strømforbruk.
-Kapasitetsledd monthly total: Månedlig kostnad for kapasitetsleddet.
-Kapasitetsledd monthly ex vat: Månedlig kostnad uten mva.
-Kapasitetsledd monthly taxes: Mva for kapasitetsleddet.
-Kapasitetsledd currency: Valuta brukt i tariffen.
-Kapasitetsledd unit measure: Måleenhet for månedlig kostnad.
-Kapasitetsledd trinn: Trinnnummer basert på forbruk.
-Oppdatering: Last API update: Når data sist ble hentet fra API-et.
-
-
 Disse attributtene gir deg en detaljert oversikt over energikostnadene dine, kapasitetsnivået og hvordan tariffen beregnes.
