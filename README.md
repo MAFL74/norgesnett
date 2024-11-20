@@ -44,8 +44,6 @@ Kapasitetsleddet er delt inn i 10 trinn:
 | 8     | 50-74,99          | 1 997,18                |
 | 9     | 75-99,99          | 2 718,59                |
 | 10    | >100              | 4 405,95                |
-
-Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
   
 Attributter og deres funksjon:  
   
@@ -79,7 +77,7 @@ Attributter og deres funksjon:
 | Kapasitetsledd unit measure      | Måleenhet for månedlig kostnad.                        |
 | Kapasitetsledd trinn             | Trinnnummer basert på forbruk.                         |
 | Oppdatering                      | Når data sist ble hentet fra API-et.                   |
-
-  
   
 Disse attributtene gir deg en detaljert oversikt over energikostnadene dine, kapasitetsnivået og hvordan tariffen beregnes.
+  
+Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
