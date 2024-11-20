@@ -1,3 +1,6 @@
+Norgesnett API v0.1.0  
+---------------------
+  
 Norgesnett API-integrasjonen lar deg hente informasjon om strømpriser og kapasitetsledd direkte fra Norgesnett. Dette er nyttig for å overvåke strømforbruket ditt og forstå hvordan nettleien beregnes.
 
 Hva gjør Norgesnett API-integrasjonen?
