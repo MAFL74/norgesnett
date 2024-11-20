@@ -20,7 +20,7 @@ Trinn 1:
 Hent API nøkkel fra Norgesnett. https://gridtariff-api.norgesnett.no/swagger/index.html  
 Du må ha Målepunkt ID klar for å hente ut denne.  
   
-Trinn 2: Overvåk data  
+Trinn 2:
 Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:  
   
 cheap_total: Billig energipris (natt).  
