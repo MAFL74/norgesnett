@@ -47,37 +47,40 @@ Kapasitetsleddet er delt inn i 10 trinn:
 | 10    | >100              | 4 405,95                |
 
 Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
--------------  
+  
 Attributter og deres funksjon:  
   
-Tariff ID: Identifikator for tariffen.  
-Tariff key: Type tariff.  
-Product: Navn på tariffproduktet.  
-Company name: Navnet på selskapet som leverer tariffen.  
-Company org no: Organisasjonsnummeret til selskapet.  
-Title: Beskrivelse av tariffen.  
-Last updated: Når tariffdataene sist ble oppdatert.  
-Resolution: Oppdateringsintervall i minutter.  
-Cheap energy ID: ID for billig energiperiode.  
-Cheap total: Total pris per kWh i billig periode.  
-Cheap total ex vat: Pris ekskl. mva i billig periode.  
-Cheap taxes: Mva for billig energi.  
-Normal energy ID: ID for normal energiperiode.  
-Normal total: Total pris per kWh i normal periode.  
-Normal total ex vat: Pris ekskl. mva i normal periode.  
-Normal taxes: Mva for normal energi.  
-Kapasitetsledd value min: Minimum strømforbruk for dette trinnet.  
-Kapasitetsledd value max: Maksimum strømforbruk for dette trinnet.  
-Kapasitetsledd next down: Forrige trinn.  
-Kapasitetsledd next up: Neste trinn.  
-Kapasitetsledd unit: Måleenhet for strømforbruk.  
-Kapasitetsledd monthly total: Månedlig kostnad for kapasitetsleddet.  
-Kapasitetsledd monthly ex vat: Månedlig kostnad uten mva.  
-Kapasitetsledd monthly taxes: Mva for kapasitetsleddet.  
-Kapasitetsledd currency: Valuta brukt i tariffen.  
-Kapasitetsledd unit measure: Måleenhet for månedlig kostnad.  
-Kapasitetsledd trinn: Trinnnummer basert på forbruk.  
-Oppdatering: Last API update: Når data sist ble hentet fra API-et.  
+| Attributt                        | Beskrivelse                                            |
+|----------------------------------|--------------------------------------------------------|
+| Tariff ID                        | Identifikator for tariffen.                            |
+| Tariff key                       | Type tariff.                                           |
+| Product                          | Navn på tariffproduktet.                               |
+| Company name                     | Navnet på selskapet som leverer tariffen.              |
+| Company org no                   | Organisasjonsnummeret til selskapet.                   |
+| Title                            | Beskrivelse av tariffen.                               |
+| Last updated                     | Når tariffdataene sist ble oppdatert.                  |
+| Resolution                       | Oppdateringsintervall i minutter.                      |
+| Cheap energy ID                  | ID for billig energiperiode.                           |
+| Cheap total                      | Total pris per kWh i billig periode.                   |
+| Cheap total ex vat               | Pris ekskl. mva i billig periode.                      |
+| Cheap taxes                      | Mva for billig energi.                                 |
+| Normal energy ID                 | ID for normal energiperiode.                           |
+| Normal total                     | Total pris per kWh i normal periode.                   |
+| Normal total ex vat              | Pris ekskl. mva i normal periode.                      |
+| Normal taxes                     | Mva for normal energi.                                 |
+| Kapasitetsledd value min         | Minimum strømforbruk for dette trinnet.                |
+| Kapasitetsledd value max         | Maksimum strømforbruk for dette trinnet.               |
+| Kapasitetsledd next down         | Forrige trinn.                                         |
+| Kapasitetsledd next up           | Neste trinn.                                           |
+| Kapasitetsledd unit              | Måleenhet for strømforbruk.                            |
+| Kapasitetsledd monthly total     | Månedlig kostnad for kapasitetsleddet.                 |
+| Kapasitetsledd monthly ex vat    | Månedlig kostnad uten mva.                             |
+| Kapasitetsledd monthly taxes     | Mva for kapasitetsleddet.                              |
+| Kapasitetsledd currency          | Valuta brukt i tariffen.                               |
+| Kapasitetsledd unit measure      | Måleenhet for månedlig kostnad.                        |
+| Kapasitetsledd trinn             | Trinnnummer basert på forbruk.                         |
+| Oppdatering                      | Når data sist ble hentet fra API-et.                   |
+
   
   
 Disse attributtene gir deg en detaljert oversikt over energikostnadene dine, kapasitetsnivået og hvordan tariffen beregnes.
