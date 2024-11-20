@@ -29,6 +29,8 @@ kapasitetsledd_trinn: Ditt nåværende kapasitetsledd.
 Norgesnett bruker en kapasitetsbasert nettleiemodell der nettleien består av to deler:  
 Kapasitetsledd: Basert på hvor mye strøm du bruker samtidig.  
 Energiledd: Basert på hvor mye strøm du totalt forbruker.  
+
+
   
 Kapasitetsleddet er delt inn i 10 trinn:  
   
@@ -44,6 +46,8 @@ Kapasitetsleddet er delt inn i 10 trinn:
 | 8     | 50-74,99          | 1 997,18                |
 | 9     | 75-99,99          | 2 718,59                |
 | 10    | >100              | 4 405,95                |
+
+
   
 Attributter og deres funksjon:  
   
