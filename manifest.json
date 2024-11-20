@@ -1,7 +1,7 @@
 {
   "domain": "norgesnett",
   "name": "Norgesnett API",
-  "version": "0.1.0",
+  "version": "1.0",
   "config_flow": true,
   "documentation": "https://github.com/MAFL74/norgesnett",
   "issue_tracker": "https://github.com/MAFL74/norgesnett/issues",
