@@ -5,5 +5,6 @@
   "iot_class": "cloud_polling",
   "country": ["NO"],
   "filename": "norgesnett",
+  "homeassistant": "2024.01",
   "render_readme": true
 }
