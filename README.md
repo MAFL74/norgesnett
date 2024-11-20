@@ -10,29 +10,30 @@ Tariffdetaljer: Opplysninger om gjeldende tariffer og priser.
 Hvordan installere Norgesnett API-integrasjonen
 
 Forutsetninger:  
-API nøkkel fra Norgesnett (api_key): xxxxxxxxxxxxxxxxx
-Målepunkt ID (metering_point_id): xxxxxxxxxxxxxxxxx
-Oppdaterings interval i timer (update_interval): 24 timer
-Standard URL (api_url): "https://gridtariff-api.norgesnett.no/api/v1.01/Tariff"
+API nøkkel fra Norgesnett (api_key): xxxxxxxxxxxxxxxxx  
+Målepunkt ID (metering_point_id): xxxxxxxxxxxxxxxxx  
+Oppdaterings interval i timer (update_interval): 24 timer  
+Standard URL (api_url): "https://gridtariff-api.norgesnett.no/api/v1.01/Tariff"  
+  
+Trinn 1:  
+  
+Hent API nøkkel fra Norgesnett. https://gridtariff-api.norgesnett.no/swagger/index.html  
+Du må ha Målepunkt ID klar for å hente ut denne.  
+  
+Trinn 2: Overvåk data  
+Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:  
+  
+cheap_total: Billig energipris (natt).  
+normal_total: Normal energipris (dag).  
+kapasitetsledd_trinn: Ditt nåværende kapasitetsledd.  
+Kapasitetsledd og trinn  
 
-Trinn 1:
-
-Hent API nøkkel fra Norgesnett. https://gridtariff-api.norgesnett.no/swagger/index.html
-Du må ha Målepunkt ID klar for å hente ut denne.
-
-Trinn 2: Overvåk data
-Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:
-
-cheap_total: Billig energipris (natt).
-normal_total: Normal energipris (dag).
-kapasitetsledd_trinn: Ditt nåværende kapasitetsledd.
-Kapasitetsledd og trinn
-Norgesnett bruker en kapasitetsbasert nettleiemodell der nettleien består av to deler:
-
-Kapasitetsledd: Basert på hvor mye strøm du bruker samtidig.
-Energiledd: Basert på hvor mye strøm du totalt forbruker.
-Kapasitetsleddet er delt inn i 10 trinn:
-
+Norgesnett bruker en kapasitetsbasert nettleiemodell der nettleien består av to deler:  
+Kapasitetsledd: Basert på hvor mye strøm du bruker samtidig.  
+Energiledd: Basert på hvor mye strøm du totalt forbruker.  
+  
+Kapasitetsleddet er delt inn i 10 trinn:  
+  
 | Trinn | Effektområde (kW) | Kapasitetsledd (kr/mnd)|
 |-------|-------------------|-------------------------|
 | 1     | 0-1,99            | 102,51                  |
