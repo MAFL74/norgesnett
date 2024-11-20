@@ -22,12 +22,10 @@ Du må ha Målepunkt ID klar for å hente ut denne.
   
 Trinn 2:  
 Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:  
-  
 cheap_total: Billig energipris (natt).  
 normal_total: Normal energipris (dag).  
 kapasitetsledd_trinn: Ditt nåværende kapasitetsledd.  
-Kapasitetsledd og trinn  
-
+  
 Norgesnett bruker en kapasitetsbasert nettleiemodell der nettleien består av to deler:  
 Kapasitetsledd: Basert på hvor mye strøm du bruker samtidig.  
 Energiledd: Basert på hvor mye strøm du totalt forbruker.  
