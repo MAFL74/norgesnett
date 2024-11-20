@@ -44,7 +44,7 @@ Energiledd: Basert på hvor mye strøm du totalt forbruker.
 Kapasitetsleddet er delt inn i 10 trinn:
 
 Trinn	Effektområde (kW)	Kapasitetsledd (kr/mnd)
-1	0-1,99	102,51
+1	0-1,99	102,51/n
 2	2-4,99	170,86
 3	5-9,99	280,97
 4	10-14,99	499,68
