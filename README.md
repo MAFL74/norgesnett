@@ -34,16 +34,16 @@ Energiledd: Basert på hvor mye strøm du totalt forbruker.
 Kapasitetsleddet er delt inn i 10 trinn:
 
 Trinn	Effektområde (kW)	Kapasitetsledd (kr/mnd)  
-1	0-1,99	102,51  
-2	2-4,99	170,86  
-3	5-9,99	280,97  
-4	10-14,99	499,68  
-5	15-19,99	663,70  
-6	20-24,99	823,18  
-7	25-49,99	1 275,76  
-8	50-74,99	1 997,18  
-9	75-99,99	2 718,59  
-10	>100	4 405,95  
+1  	0-1,99  	102,51  
+2  	2-4,99  	170,86  
+3  	5-9,99  	280,97  
+4  	10-14,99  	499,68  
+5  	15-19,99  	663,70  
+6  	20-24,99  	823,18  
+7  	25-49,99  	1275,76  
+8  	50-74,99  	1997,18  
+9  	75-99,99  	2718,59  
+10  	  >100  	4405,95  
   
 Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
 -------------  
