@@ -1,4 +1,4 @@
-Version: 0.6 (alpha)
+Version: 0.1.0 (alpha)
 
 
 Slik Bruker Du Norgesnett API
