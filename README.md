@@ -82,7 +82,7 @@ Attributter og deres funksjon:
 | Kapasitetsledd monthly taxes     | Mva for kapasitetsleddet.                              |
 | Kapasitetsledd currency          | Valuta brukt i tariffen.                               |
 | Kapasitetsledd unit measure      | Måleenhet for månedlig kostnad.                        |
-| Kapasitetsledd trinn             | Trinnnummer basert på forbruk.                         |
+| Kapasitetsledd trinn             | Trinn basert på 3 høyeste toppene                      |
 | Oppdatering                      | Når data sist ble hentet fra API-et.                   |
   
 Disse attributtene gir deg en detaljert oversikt over energikostnadene dine, kapasitetsnivået og hvordan tariffen beregnes.
