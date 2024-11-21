@@ -10,7 +10,7 @@ Energipriser: Sanntidsinformasjon om billig (natt) og normal (dag) energipris.
 Kapasitetsledd: Informasjon om hvilket kapasitetsledd (trinn) du befinner deg i, basert på ditt strømforbruk.
 Tariffdetaljer: Opplysninger om gjeldende tariffer og priser.
 
-Hvordan installere Norgesnett API-integrasjonen
+Hva trenger du for å bruke integrasjonen? 
 
 Forutsetninger:  
 API nøkkel fra Norgesnett (api_key): xxxxxxxxxxxxxxxxx  
@@ -19,10 +19,9 @@ Oppdaterings interval i timer (update_interval): 24 timer
 Standard URL (api_url): "https://gridtariff-api.norgesnett.no/api/v1.01/Tariff"  
   
 Trinn 1:  
-  
 Hent API nøkkel fra Norgesnett. https://gridtariff-api.norgesnett.no/swagger/index.html  
-Du må ha Målepunkt ID klar for å hente ut denne.  
-  
+Du må ha Målepunkt ID klar for å hente ut denne.  (Mer detaljert guide i bunn)
+
 Trinn 2:  
 Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:  
 cheap_total: Billig energipris (natt).  
@@ -88,3 +87,30 @@ Attributter og deres funksjon:
 Disse attributtene gir deg en detaljert oversikt over energikostnadene dine, kapasitetsnivået og hvordan tariffen beregnes.
   
 Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
+
+# Hvordan generere API-nøkkel på Norgesnett
+
+Logg på [minside på Norgesnett](https://minside.norgesnett.no/)
+
+1. **Velg** `Abonnement`.
+2. **Noter ned** målepunktnummeret ditt: `Målepunktid (EAN)` (18 siffer).
+3. **Noter ned** kundenummeret ditt: `k.nr: 99xxxx` (6 siffer).
+
+---
+
+Gå over til [Swagger-grensesnittet til Norgesnett](https://gridtariff-api.norgesnett.no/swagger/index.html).
+
+### Instruksjoner
+- Under **`customerId`**: Sett inn kundenummeret.
+- Under **`meteringPointId`**: Sett inn målepunktnummeret.
+
+---
+
+### Eksempel på JSON-format:
+```json
+{
+  "customerId": "123456",
+  "meteringPointId": "123456789012345678"
+}
+
+  
