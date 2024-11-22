@@ -1,3 +1,9 @@
+![Logo](norgesnett_256.png)
+
+[![hacs_badge]](https://github.com/hacs/integration)
+[![GitHub Activity][commits-shield]][commits]
+[![License][license-shield]](LICENSE)
+
 Norgesnett API v1.0  
 ---------------------
   
