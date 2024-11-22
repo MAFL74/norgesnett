@@ -65,14 +65,14 @@ Attributter og deres funksjon:
 | Title                            | Beskrivelse av tariffen.                               |
 | Last updated                     | Når tariffdataene sist ble oppdatert.                  |
 | Resolution                       | Oppdateringsintervall i minutter.                      |
-| Cheap energy ID                  | ID for billig energiperiode.                           |
-| Cheap total                      | Total pris per kWh i billig periode.                   |
-| Cheap total ex vat               | Pris ekskl. mva i billig periode.                      |
-| Cheap taxes                      | Mva for billig energi.                                 |
-| Normal energy ID                 | ID for normal energiperiode.                           |
-| Normal total                     | Total pris per kWh i normal periode.                   |
-| Normal total ex vat              | Pris ekskl. mva i normal periode.                      |
-| Normal taxes                     | Mva for normal energi.                                 |
+| Cheap energy ID                  | ID for nattpris (22-06).                               |
+| Cheap total                      | Total pris per kWh natt (22-06).                       |
+| Cheap total ex vat               | Pris ekskl. mva natt (22-06).                          |
+| Cheap taxes                      | Mva for nattpris (22-06).                              |
+| Normal energy ID                 | ID for dagspris (06-22).                               |
+| Normal total                     | Total pris per kWh dag (06-22).                        |
+| Normal total ex vat              | Pris ekskl. mva dag (06-22).                           |
+| Normal taxes                     | Mva for dagspris (06-22).                              |
 | Kapasitetsledd value min         | Minimum strømforbruk for dette trinnet.                |
 | Kapasitetsledd value max         | Maksimum strømforbruk for dette trinnet.               |
 | Kapasitetsledd next down         | Forrige trinn.                                         |
@@ -83,13 +83,13 @@ Attributter og deres funksjon:
 | Kapasitetsledd monthly taxes     | Mva for kapasitetsleddet.                              |
 | Kapasitetsledd currency          | Valuta brukt i tariffen.                               |
 | Kapasitetsledd unit measure      | Måleenhet for månedlig kostnad.                        |
-| Kapasitetsledd trinn             | Trinn basert på 3 høyeste toppene                      |
-| Oppdatering                      | Når data sist ble hentet fra API-et.                   |
+| Kapasitetsledd trinn             | Trinn basert på 3 høyeste toppene.                     |
+| Oppdatering                      | Når data sist ble hentet fra Norgesnett.               |
   
 Disse attributtene gir deg en detaljert oversikt over energikostnadene dine, kapasitetsnivået og hvordan tariffen beregnes.
   
 Ved å bruke Norgesnett API-integrasjonen kan du få bedre innsikt i strømforbruket ditt og optimalisere kostnadene basert på gjeldende tariffer og kapasitetsledd.  
-
+  
 # Hvordan generere API-nøkkel på Norgesnett
 
 Logg på [minside på Norgesnett](https://minside.norgesnett.no/)
