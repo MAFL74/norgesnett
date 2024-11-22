@@ -1,4 +1,4 @@
-![Logo](norgesnett_256.png)
+![Logo](norgesnett_small.png)
 
 Norgesnett API v1.0  
 ---------------------
