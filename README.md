@@ -1,9 +1,5 @@
 ![Logo](norgesnett_256.png)
 
-[![hacs_badge]](https://github.com/hacs/integration)
-[![GitHub Activity][commits-shield]][commits]
-[![License][license-shield]](LICENSE)
-
 Norgesnett API v1.0  
 ---------------------
   
@@ -18,17 +14,17 @@ Tariffdetaljer: Opplysninger om gjeldende tariffer og priser.
 
 Hva trenger du for å bruke integrasjonen? 
 
-Forutsetninger:  
+## Forutsetninger:  
 API nøkkel fra Norgesnett (api_key): xxxxxxxxxxxxxxxxx  
 Målepunkt ID (metering_point_id): xxxxxxxxxxxxxxxxx  
 Oppdaterings interval i timer (update_interval): 24 timer  
 Standard URL (api_url): "https://gridtariff-api.norgesnett.no/api/v1.01/Tariff"  
   
-Trinn 1:  
+## Trinn 1:  
 Hent API nøkkel fra Norgesnett. https://gridtariff-api.norgesnett.no/swagger/index.html  
 Du må ha Målepunkt ID klar for å hente ut denne.  (Mer detaljert guide i bunn)
 
-Trinn 2:  
+## Trinn 2:  
 Etter oppsettet vil en sensor, for eksempel sensor.norgesnett_tariff, oppdateres med energiprisene. Du kan se attributter som:  
 cheap_total: Billig energipris (natt).  
 normal_total: Normal energipris (dag).  
