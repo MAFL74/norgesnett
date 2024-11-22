@@ -34,7 +34,7 @@ Norgesnett bruker en kapasitetsbasert nettleiemodell der nettleien består av to
 Kapasitetsledd: Basert på hvor mye strøm du bruker samtidig.  
 Energiledd: Basert på hvor mye strøm du totalt forbruker.  
   
-  
+---------------------
   
 Kapasitetsleddet er delt inn i 10 trinn:  
   
