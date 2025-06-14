@@ -2,7 +2,15 @@ import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
 import aiohttp
-from .const import DOMAIN, CONF_API_KEY, CONF_METERING_POINT_ID, CONF_UPDATE_INTERVAL, CONF_API_URL, DEFAULT_API_URL
+
+from .const import (
+    DOMAIN,
+    CONF_API_KEY,
+    CONF_METERING_POINT_ID,
+    CONF_UPDATE_INTERVAL,
+    CONF_API_URL,
+    DEFAULT_API_URL,
+)
 
 DEFAULT_UPDATE_INTERVAL = 24  # 24 timer
 
@@ -45,8 +53,9 @@ class NorgesnettConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
 
 class NorgesnettOptionsFlow(config_entries.OptionsFlow):
-    def __init__(self, config_entry):
-        self.config_entry = config_entry
+    def __init__(self, entry: config_entries.ConfigEntry):
+        super().__init__()
+        self._entry = entry  # Ikke bruk config_entry direkte
 
     async def async_step_init(self, user_input=None):
         if user_input is not None:
@@ -54,8 +63,8 @@ class NorgesnettOptionsFlow(config_entries.OptionsFlow):
 
         # Konfigurasjonsskjema for endringer
         data_schema = vol.Schema({
-            vol.Optional(CONF_API_KEY, default=self.config_entry.data.get(CONF_API_KEY, "")): str,
-            vol.Optional(CONF_UPDATE_INTERVAL, default=self.config_entry.data.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL)): int,  # 24 timer som standard
-            vol.Optional(CONF_API_URL, default=self.config_entry.data.get(CONF_API_URL, DEFAULT_API_URL)): str,
+            vol.Optional(CONF_API_KEY, default=self._entry.data.get(CONF_API_KEY, "")): str,
+            vol.Optional(CONF_UPDATE_INTERVAL, default=self._entry.data.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL)): int,  # 24 timer som standard
+            vol.Optional(CONF_API_URL, default=self._entry.data.get(CONF_API_URL, DEFAULT_API_URL)): str,
         })
         return self.async_show_form(step_id="init", data_schema=data_schema)
