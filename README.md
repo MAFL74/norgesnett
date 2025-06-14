@@ -95,11 +95,11 @@ Norgesnett bruker en kapasitetsbasert nettleiemodell der nettleien består av to
 
 ## 🆕 Endringslogg
 
-### Versjon 1.0.1 – Tilpasning til ny Home Assistant
-- Fikset deprecated bruk av `self.config_entry` i `OptionsFlow`.
-- Home Assistant har fjernet støtte for å sette `config_entry` direkte i `config_flow.py`.
-- Koden er nå fremtidssikker og kompatibel med Home Assistant versjon 2025.12 og nyere.
-- Ingen endringer i funksjonalitet – kun intern justering for å unngå feilmelding og sikre kompatibilitet.
+### Versjon 1.0.1 – Fremtidssikring for Home Assistant 2025.12+
+- Fjernet bruk av `self.config_entry` i `OptionsFlow` som er fjernet i ny HA-versjon.
+- Endret `__init__.py` til å bruke `async_forward_entry_setups()` i stedet for deprecated `async_forward_entry_setup()`.
+- Endret `unload` til å bruke `async_unload_platforms()` i stedet for `async_forward_entry_unload()`.
+- Ingen endringer i funksjonalitet – kun interne justeringer for å unngå feilmeldinger og sikre stabil drift i fremtidige versjoner av Home Assistant.
 
 ---
 
